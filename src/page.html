@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Minimal directives</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    .invalid {
+      box-shadow: 0 0 4px 1px red;
+    }
+    .active {
+      background-color: #EEE;
+    }
+  </style>
+</head>
+<body>
+<main class="container-fluid">
+  <header data-page-header="{menu:[['Page one','/'],['Minimal components','/page.html']]}">
+    <h1>Page</h1>
+  </header>
+  <section>
+    <ul data-ul="foo,bar,bar,qux"></ul>
+    <input type="button" class="btn btn-default" value="input" />
+  </section>
+  <section data-filter-list>
+    <label>filter <input data-input-text /></label>
+    <ul data-ul="lorem,ipsum,dolor,sit,amet,consectetur,adipisicing,elit,aperiam,consequatur,cumque,doloremque,eos,eveniet,facilis,illo,inventore,molestiae,neque,perferendis,qui,quia,quos,sequi,soluta,temporibus,ut,vitae!,natus,nobis!,at,consequatur,error,est,laborum,ab,aspernatur,consectetur,corporis,facere,harum,iure,iusto,minima,molestias,quam,qui,quod,ratione,et,quae,quisquam!,accusantium,assumenda,atque,esse,expedita,illo,iure,libero,natus,nemo,nihil,porro,provident,quam,qui,ratione,suscipit,vero,vitae,voluptate,consequatur,fugit"></ul>
+  </section>
+</main>
+
+
+<script src="js/index.js"></script>
+</body>
+</html>
