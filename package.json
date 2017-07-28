@@ -11,7 +11,7 @@
     "lint": "eslint src/js/index.js",
     "js": "webpack --config webpack.config.js",
     "js:watch": "chokidar \"src/**/*.js\" -c \"npm run js\"",
-    "copy": "copy src\\index.html dist\\index.html | copy src\\page.html dist\\page.html",
+    "copy": "cp src/index.html dist/index.html | cp src/page.html dist/page.html | cp -r src/static dist",
     "copy:watch": "chokidar \"src/**/*.html\" -c \"npm run copy\"",
     "dir": "mkdirp dist/js",
     "serve": "node ./task/serve dist 8385"
@@ -34,5 +34,10 @@
   },
   "author": "Ron Valstar",
   "license": "GPL-3.0",
-  "dependencies": {}
+  "dependencies": {
+    "gsap": "^1.20.2",
+    "matter-js": "^0.13.0",
+    "signals": "^1.0.0",
+    "voronoi": "^1.0.0"
+  }
 }
