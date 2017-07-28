@@ -5,4 +5,8 @@ import '../components/Form'
 import '../components/Header'
 import '../components/FilterList'
 import '../components/Search'
+import '../components/Issues'
+import '../components/Goodreads'
+import '../components/Console'
+import '../components/Experiment'
 component.initialise()

@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Minimal directives</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <style>
+    body{
+      background:#000;
+      color:#666;
+    }
     .invalid {
       box-shadow: 0 0 4px 1px red;
     }
@@ -15,26 +20,14 @@
 </head>
 <body>
 <main class="container-fluid">
-  <header data-page-header="{menu:[['Page one','/'],['Minimal components','/page.html']]}">
-    <h1>Minimal components</h1>
-  </header>
-  <section>
-    <form class="form-inline" data-form>
-      
-      <label>word <input data-input-text="{validation:/\w+/}" /></label>
-      <label>number <input data-input-text='{validation:/^\d+$/}' /></label>
-      <label>anything <input data-input-text /></label>
-      <input class="form-control" type="submit" value="submit" />
-      
-      <input type="button" class="btn btn-default" value="input" />
-      <a href="#" class="btn btn-default">anchor</a>
-      <button class="btn btn-default">button</button>
-      
-    </form>
-    <ul data-ul="foo,bar,bar,qux"></ul>
-    <ul data-ul="Lorem,ipsum,dolor,sit,amet,consectetur,adipisicing,elit,Ad,asperiores,autem,blanditiis,eligendi,eveniet,id,laboriosam,magnam,magni,maxime,minima,nulla,numquam,odio,placeat,rerum,saepe,similique,totam,veritatis,voluptates"></ul>
-  </section>
+  <section data-experiment="type"></section>
+  <div data-console></div>
 </main>
+<script>
+window.addEventListener('error',({message,lineno,filename,error})=>{
+  document.write([message,lineno,filename,error].join(' '))
+})
+</script>
 <script src="js/index.js"></script>
 </body>
 </html>

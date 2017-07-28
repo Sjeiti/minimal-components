@@ -152,6 +152,14 @@ class BaseComponent {
     return this._element
   }
 
+  /**
+   * Getter for options
+   * @returns {object}
+   */
+  get options(){
+    return this._options
+  }
+
   static getFragment(str){
     const fragment = document.createDocumentFragment()
     const div = document.createElement('div')
